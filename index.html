@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickVert is a free all-in-one unit converter. Convert length, weight, volume, temperature, and currency instantly. No sign-up required. Fast, accurate, and easy to use.">
+    <title>QuickVert - Free Online Unit Converter | Convert Length, Weight, Temperature Instantly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <!-- Ganti dengan logo.png jika sudah punya -->
+                <h1 class="logo">
+                    <span class="logo-icon">&#9889;</span> QuickVert
+                </h1>
+                <!-- Jika sudah punya logo.png, hapus h1 di atas dan uncomment ini: -->
+                <!-- <img src="logo.png" alt="QuickVert Unit Converter - Free Online Conversion Tool" class="site-logo"> -->
+            </div>
+            <p class="tagline">Free Online Unit Converter — Convert Anything Instantly</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main container">
+        
+        <!-- Tab Kategori -->
+        <div class="tabs" id="categoryTabs">
+            <button class="tab-btn active" data-category="length">
+                <span class="tab-icon">&#128207;</span> Length
+            </button>
+            <button class="tab-btn" data-category="weight">
+                <span class="tab-icon">&#9878;</span> Weight
+            </button>
+            <button class="tab-btn" data-category="temperature">
+                <span class="tab-icon">&#127777;</span> Temperature
+            </button>
+            <button class="tab-btn" data-category="volume">
+                <span class="tab-icon">&#127865;</span> Volume
+            </button>
+            <button class="tab-btn" data-category="currency">
+                <span class="tab-icon">&#128176;</span> Currency
+            </button>
+        </div>
+
+        <!-- Card Converter -->
+        <div class="converter-card">
+            
+            <!-- Input Nilai -->
+            <div class="input-group">
+                <label for="inputValue" class="input-label">Value</label>
+                <input type="number" id="inputValue" class="input-field" placeholder="Enter value..." value="1" step="any" min="0">
+            </div>
+
+            <!-- Row: Satuan Asal & Tombol Swap & Satuan Tujuan -->
+            <div class="conversion-row">
+                <!-- Satuan Asal -->
+                <div class="unit-box">
+                    <label for="fromUnit" class="unit-label">From</label>
+                    <select id="fromUnit" class="unit-select"></select>
+                </div>
+
+                <!-- Tombol Swap -->
+                <button id="swapBtn" class="swap-btn" title="Swap units">&#8646;</button>
+
+                <!-- Satuan Tujuan -->
+                <div class="unit-box">
+                    <label for="toUnit" class="unit-label">To</label>
+                    <select id="toUnit" class="unit-select"></select>
+                </div>
+            </div>
+
+            <!-- Hasil -->
+            <div class="result-box">
+                <span class="result-label">Conversion Result</span>
+                <div class="result-display">
+                    <span id="resultValue" class="result-value">--</span>
+                    <span id="resultUnit" class="result-unit"></span>
+                </div>
+                <button id="copyBtn" class="copy-btn" title="Copy result">&#128203; Copy</button>
+            </div>
+
+            <!-- Info Tambahan -->
+            <div id="infoBox" class="info-box"></div>
+
+        </div>
+
+        <!-- Section Artikel Pendukung (untuk SEO) -->
+        <section class="seo-section">
+            <h2>Free All-in-One Unit Converter for Every Need</h2>
+            <p>Are you a <strong>student</strong> working on physics homework? A <strong>home cook</strong> following international recipes? Or a <strong>traveler</strong> trying to understand local units? <strong>QuickVert</strong> makes it effortless to convert length, weight, temperature, volume, and currency in seconds. Just enter a value, pick your units, and get the result instantly. No cost, no sign-up, and always accurate.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 QuickVert. Free Online Unit Converter. | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        </div>
+    </footer>
+
+    <!-- Toast Notifikasi Copy -->
+    <div id="toast" class="toast">Result copied!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
